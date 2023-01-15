@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: cescoferraro/fruki
+  branch: main
+
+media_folder: src/images
+public_folder: /assets
+collections:
+  - name: banners
+    label: Banner
+    folder: content/banner
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Data, widget: date }
+      - { name: name, label: Nome }
+      - { name: description, label: Descrição, required: false }
+      - { name: desktop, label: Desktop, widget: image }
+      - { name: mobile, label: Mobile, widget: image }
