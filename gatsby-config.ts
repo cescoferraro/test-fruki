@@ -31,7 +31,7 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "content",
-        "path": "./content/"
+        "path": "./src/content/"
       },
       __key: "images"
     },
@@ -49,10 +49,7 @@ const config: GatsbyConfig = {
         "path": "./src/pages/"
       },
       __key: "pages"
-    },
-
-
-  ]
+    }]
 };
 
 export default config;
