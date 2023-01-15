@@ -16,4 +16,4 @@ collections:
       - { name: name, label: Nome }
       - { name: description, label: Descrição, required: false }
       - { name: desktop, label: Desktop, widget: image }
-      - { name: mobile, label: Mobile, widget: image }
+      - { name: mobile, label: Mobile, widget: image, media_folder: ../../src/images }
