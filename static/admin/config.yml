@@ -9,7 +9,6 @@ collections:
   - name: banners
     label: Banner
     folder: src/content/banner
-    media_folder: src/images/banner
     create: true
     fields:
       - { name: path, label: Path }
