@@ -14,12 +14,28 @@ const config: GatsbyConfig = {
     options: {
       "trackingId": "32434"
     }
-  }, "gatsby-plugin-image", "gatsby-plugin-sitemap", {
+  }, "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
       "icon": "src/images/icon.png"
     }
-  }, "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", `gatsby-transformer-remark`,
+  },
+
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+      },
+    },
+    "gatsby-plugin-image", "gatsby-plugin-sharp","gatsby-transformer-sharp", `gatsby-transformer-remark`,
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "content",
+        "path": "./src/content/"
+      },
+      __key: "images"
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
