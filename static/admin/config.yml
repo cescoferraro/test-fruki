@@ -1,14 +1,15 @@
 backend:
   name: github
-  repo: cescoferraro/fruki
-  branch: main
+  repo: cescoferraro/test-fruki
+  branch: master
 
 media_folder: src/images
 public_folder: /assets
 collections:
   - name: banners
     label: Banner
-    folder: content/banner
+    folder: src/content/banner
+    media_folder: src/images/banner
     create: true
     fields:
       - { name: path, label: Path }
