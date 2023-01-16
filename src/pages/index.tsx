@@ -1,5 +1,6 @@
+import {graphql} from "gatsby";
 import * as React from "react"
-import type { HeadFC, PageProps } from "gatsby"
+import type {HeadFC, PageProps} from "gatsby"
 
 const pageStyles = {
   color: "#232129",
@@ -136,12 +137,13 @@ const links = [
   },
 ]
 
-const IndexPage: React.FC<PageProps> = () => {
+const IndexPage: React.FC<PageProps> = (props) => {
+  console.log(11,props);
   return (
     <main style={pageStyles}>
       <h1 style={headingStyles}>
         Congratulations
-        <br />
+        <br/>
         <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
       </h1>
       <p style={paragraphStyles}>
@@ -162,7 +164,7 @@ const IndexPage: React.FC<PageProps> = () => {
       </ul>
       <ul style={listStyles}>
         {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
+          <li key={link.url} style={{...listItemStyles, color: link.color}}>
             <span>
               <a
                 style={linkStyle}
@@ -191,3 +193,32 @@ const IndexPage: React.FC<PageProps> = () => {
 export default IndexPage
 
 export const Head: HeadFC = () => <title>Home Page</title>
+
+export const pageQuery = graphql`
+    query Final {
+        allMdx(filter: {internal: {contentFilePath: {regex: "/(banner)/"}}}) {
+            edges {
+                node {
+                    id
+                    internal {
+                        contentFilePath
+                    }
+                    frontmatter {
+                        desktop {
+                            id
+                            childImageSharp {
+                                gatsbyImageData
+                            }
+                        }
+                        mobile {
+                            id
+                            childImageSharp {
+                                gatsbyImageData
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+`;
