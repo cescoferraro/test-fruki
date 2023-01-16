@@ -26,14 +26,15 @@ const config: GatsbyConfig = {
         extensions: [`.mdx`, `.md`],
       },
     },
-    "gatsby-plugin-image", "gatsby-plugin-sharp","gatsby-transformer-sharp", `gatsby-transformer-remark`,
+    "gatsby-plugin-image", "gatsby-plugin-sharp","gatsby-transformer-sharp",
+    `gatsby-transformer-remark`,
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "content",
         "path": "./src/content/"
       },
-      __key: "images"
+      __key: "content"
     },
     {
       resolve: 'gatsby-source-filesystem',

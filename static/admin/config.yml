@@ -4,12 +4,13 @@ backend:
   branch: master
 
 media_folder: src/images
-public_folder: /assets
+public_folder: /images
 collections:
   - name: banners
     label: Banner
     folder: src/content/banner
     create: true
+    public_folder: ../../images/banner
     fields:
       - { name: path, label: Path }
       - { name: date, label: Data, widget: date }
