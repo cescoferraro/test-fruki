@@ -4,5 +4,5 @@ date: 2023-01-15T00:30:05.823Z
 name: sdfsdf
 description: sdf
 desktop: ../../images/banner/screen-shot-2022-02-01-at-00.54.07.png
-mobile: ../../images/banner/agua-da-pedra-logo-5f7af2f1e8-seeklogo.com.png
+mobile: ../../images/banner/screen-shot-2022-03-09-at-12.34.22.png
 ---
