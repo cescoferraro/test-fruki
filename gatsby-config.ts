@@ -17,7 +17,7 @@ const config: GatsbyConfig = {
   }, "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      "icon": "src/images/icon.png"
+      "icon": "static/assets/icon.png"
     }
   },
     {
@@ -32,17 +32,17 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-source-filesystem',
       options: {
         "name": "content",
-        "path": "./src/content/"
+        "path": "./content/"
       },
       __key: "content"
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        "name": "images",
-        "path": "./src/images/"
+        "name": "assets",
+        "path": "./static/assets/"
       },
-      __key: "images"
+      __key: "assets"
     }, {
       resolve: 'gatsby-source-filesystem',
       options: {

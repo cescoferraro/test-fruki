@@ -3,18 +3,18 @@ backend:
   repo: cescoferraro/test-fruki
   branch: master
 
-media_folder: src/images
-public_folder: /images
+media_folder: static/assets
+public_folder: /assets
 collections:
   - name: banners
     label: Banner
-    folder: src/content/banner
+    folder: content/banner
     create: true
-    public_folder: ../../images/banner
+    public_folder: ../../static/assets/banner
     fields:
       - { name: path, label: Path }
       - { name: date, label: Data, widget: date }
       - { name: name, label: Nome }
       - { name: description, label: Descrição, required: false }
-      - { name: desktop, label: Desktop, widget: image, media_folder: ../../images/banner }
-      - { name: mobile, label: Mobile, widget: image, media_folder: ../../images/banner }
+      - { name: desktop, label: Desktop, widget: image, media_folder: ../../static/assets/banner }
+      - { name: mobile, label: Mobile, widget: image, media_folder: ../../static/assets/banner }
